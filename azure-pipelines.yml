@@ -31,3 +31,8 @@ steps:
     make build
   workingDirectory: '$(modulePath)'
   displayName: 'Get dependencies, then build'
+
+- task: Docker@2
+  inputs:
+    command: 'build'
+    Dockerfile: 'Dockerfile'
